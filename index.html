@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mars Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Inria+Serif:wght@300;700&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Changa+One&family=Inria+Serif:wght@300;700&family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Changa+One&family=Inria+Serif:wght@300;700&family=Josefin+Sans:wght@400;700&family=Urbanist:wght@100;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="hero">
+        <header class="hero__head">
+          <div class="hero__head__logo">
+            <img src="./img/logo.png" alt="" />
+          </div>
+          <nav class="hero__head__nav">
+            <h4 class="hero__head__nav__text">Explore mars</h4>
+            <h4 class="hero__head__nav__text">Yesterday's View</h4>
+            <h4 class="hero__head__nav__text">About</h4>
+          </nav>
+          <nav class="hero__head__navres">
+            <img src="./img/hambuger.png" alt="" />
+          </nav>
+        </header>
+        <div class="hero__main">
+          <h1 class="hero__main__text">
+            Mars Revealed: A Cosmic Odyssey in Pictures!
+          </h1>
+          <button class="hero__main__btn">Get Started</button>
+        </div>
+      </div>
+      <section class="recentpic">
+        <header class="recentpic__head">
+          Yesterday's View
+          <p class="recentpic__head__paragraph">
+            Yesterday's Marvels: Relive Mars' Beauty. Explore a selection of
+            awe-inspiring images captured by Mars rovers on the previous day.
+            Step back in time and witness the Red Planet's captivating
+            landscapes firsthand.
+          </p>
+        </header>
+        <div class="recentpic__slide">
+          <div class="recentpic__slide__container">
+            <div class="loader">
+              <section class="loading-section">
+                <div class="loader">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <div class="switcher">
+          <img class="btnright" src="./img/next.png" alt="" />
+          <img class="btnleft" src="./img/previous.png" alt="" />
+        </div>
+      </section>
+      <section class="searchPic">
+        <header class="searchPic__head">
+          Explore Mars
+          <p class="searchPic__head__paragraph">
+            Enter the date and camera type to discover captivating images taken
+            by the Mars rover on that day. Happy cosmic exploration!
+          </p>
+          <form class="searchPic__form" action="">
+            <label for="date">
+              Date Picture taken:
+              <input class="searchPic__form__date" type="date" />
+            </label>
+            <label for="camera-type">
+              Camera-Type
+              <select
+                class="searchPic__form__select"
+                name="camera-type"
+                id="camera-type"
+                id=""
+              >
+                <option value="fhaz">
+                  FHAZ Front Hazard Avoidance Camera
+                </option>
+                <option value="rhac">
+                  RHAZ Rear Hazard Avoidance Camera
+                </option>
+                <option value="mast">MAST Mast Camera</option>
+                <option value="chemcam">
+                  CHEMCAM Chemistry and Camera Complex
+                </option>
+                <option value="mahli">
+                  MAHLI Mars Hand Lens Imager
+                </option>
+                <option value="mardi">
+                  MARDI Mars Descent Imager
+                </option>
+                <option value="nc">Navigation Camera</option>
+                <option value="Pancam">
+                  PANCAM Panoramic Camera
+                </option>
+                <option
+                  value="MINITES	Miniature Thermal Emission Spectrometer (Mini-TES)"
+                >
+                  MINITES Miniature Thermal Emission Spectrometer (Mini-TES)
+                </option>
+                ">
+              </select>
+            </label>
+            <input
+              class="searchPic__form__submit"
+              type="submit"
+              name=""
+              id=""
+            />
+          </form>
+        </header>
+        <div class="searchPic__results">
+          <div class="loader">
+            <section class="loading-section">
+              <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <div class="pagination">
+        <h4 class="pagination__prev">previous page</h4>
+        <h4 class="pagination__prev">next page</h4>
+      </div>
+    </main>
+  </body>
+ <script src="controller.js" type="module"></script>
+</html>

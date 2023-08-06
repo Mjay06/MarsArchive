@@ -1,0 +1,391 @@
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: black;
+}
+@mixin textheader {
+  color: #fff;
+  font-family: Boogaloo;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@mixin textparagragh {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.switcher {
+  display: flex;
+  transform: translateY(20px);
+  justify-content: center;
+  background: rgba(191, 210, 229, 0.4);
+  backdrop-filter: blur(5px);
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 2rem;
+  margin: 0 auto;
+}
+.hero {
+  background: linear-gradient(
+      0deg,
+      rgba(93, 54, 75, 0.65) 0%,
+      rgba(93, 54, 75, 0.65) 100%
+    ),
+    url(/img/sunset-abandoned-mining-machinery-robot-works-generated-by-ai.jpg),
+    lightgray 50% / cover no-repeat;
+  height: 90vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 4rem 4rem;
+  @media only screen and (max-width: 414px) {
+    height: 100vh;
+    padding: 1rem;
+  }
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    &__navres {
+      display: none;
+      @media only screen and (max-width: 414px) {
+        display: flex;
+      }
+    }
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      &__text {
+        color: #fff;
+        font-family: Boogaloo;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @media only screen and (max-width: 414px) {
+          display: none;
+        }
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+      }
+    }
+  }
+  &__main {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    @media only screen and (max-width: 414px) {
+      left: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &__text {
+      color: #f3f3f3;
+      text-align: center;
+      text-shadow: 4px 4px 7px #80504c;
+      font-family: Changa One;
+      font-size: 8rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      width: 70.9375rem;
+      margin-bottom: 4rem;
+      @media only screen and (max-width: 414px) {
+        width: fit-content;
+        font-size: 4rem;
+      }
+    }
+    &__btn {
+      padding: 2.5rem 8.8rem;
+      border-radius: 4rem;
+      background: rgba(191, 210, 229, 0.4);
+      backdrop-filter: blur(5px);
+      color: #f3f3f3;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Boogaloo;
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      outline: none;
+      border: none;
+      @media only screen and (max-width: 414px) {
+        width: fit-content;
+        font-size: 2rem;
+        padding: 1.5rem 5rem;
+      }
+    }
+  }
+}
+.recentpic {
+  margin-top: 4rem;
+  padding: 4rem 4rem;
+  @media only screen and (max-width: 414px) {
+    padding: 1rem;
+  }
+  &__head {
+    @include textheader;
+    margin-bottom: 4rem;
+    @media only screen and (max-width: 414px) {
+      width: fit-content;
+      font-size: 3rem;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__paragraph {
+      @include textparagragh;
+      @media only screen and (max-width: 414px) {
+        width: fit-content;
+        font-size: 1rem;
+        padding: 0;
+      }
+    }
+  }
+  &__slide {
+    height: 80vh;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 2rem;
+    @media only screen and (max-width: 414px) {
+     height: 50vh;
+     width: 100%;
+     border-radius: .5rem;
+    } 
+    &__container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      background: rgba(191, 210, 229, 0.4);
+      backdrop-filter: blur(5px);
+      border-radius: 2rem;
+      @media only screen and (max-width: 414px) {
+        height: 100%;
+        width: 100%;
+        border-radius: .5rem;
+       }
+
+      &__slides {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        flex: 0 0 100%;
+        position: absolute;
+        top: 0;
+        transition: 1s all;
+        @media only screen and (max-width: 414px) {
+          flex-direction: column;
+
+         }
+        & img {
+          object-fit: contain;
+          height: 100%;
+          @media only screen and (max-width: 414px) {
+            height: 80%;
+           }
+    
+        }
+        &__text {
+          padding: 4rem;
+          @media only screen and (max-width: 414px) {
+            padding: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+           }
+          & h4{
+            color: black;
+            @include textparagragh();
+            color: black;
+            font-size: 1.4rem;
+            font-weight: 400;
+            @media only screen and (max-width: 414px) {
+              padding: 0;
+              font-size: 1rem;
+             }
+          }
+        }
+      }
+    }
+  }
+}
+.searchPic {
+  margin-top: 4rem;
+  padding: 4rem 4rem;
+  @media only screen and (max-width: 414px) {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__head {
+    @include textheader;
+    margin-bottom: 4rem;
+    &__paragraph {
+      @include textparagragh;
+    }
+  }
+  &__form {
+    @include textparagragh;
+    font-weight: 400;
+    &__date {
+      background: rgba(37, 37, 37, 0.62);
+      backdrop-filter: blur(5px);
+      color: white;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      border: none;
+      margin-right: 4rem;
+      &:focus {
+        outline: none;
+      }
+    }
+    &__select {
+      background: rgba(37, 37, 37, 0.62);
+      backdrop-filter: blur(5px);
+      color: white;
+      padding: 0.5rem 2rem;
+      border-radius: 1rem;
+      border: none;
+      margin-right: 4rem;
+      @media only screen and (max-width: 414px) {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    &__submit {
+      background: rgba(37, 37, 37, 0.62);
+      backdrop-filter: blur(5px);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 1rem;
+      border: none;
+      margin-right: 4rem;
+    }
+  }
+  &__results {
+    &__result {
+      margin: 3rem 0;
+    }
+    &__description {
+      color: black;
+      font-family: Urbanist;
+      font-size: 1.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      margin-top: -10rem;
+      border-radius: 2.5rem;
+      background: rgba(191, 210, 229, 0.4);
+      backdrop-filter: blur(5px);
+      width: fit-content;
+      padding: 2rem 2rem;
+    }
+    &__img {
+      flex: 0 0 100%; /* Make each slide take up the full width of the wrapper */
+      height: 80vh; /* Set the height of each slide to match the container */
+      overflow: hidden; /* Hide any content that overflows the slide */
+      border-radius: 4rem;
+      background: rgba(191, 210, 229, 0.4);
+      backdrop-filter: blur(5px);
+      padding: 2rem;
+    }
+    & img {
+      width: 100%; /* Ensure the image takes up the whole slide */
+      height: 100%; /* Ensure the image takes up the whole slide */
+      object-fit: contain; /* Scale the image to cover the entire slide */
+    }
+    &__info {
+      border-radius: 2rem 2rem 0 0;
+      display: flex;
+      background: black;
+      justify-content: space-between;
+      padding: 4rem;
+      @include textparagragh;
+      margin-top: -4rem;
+      border: solid rgb(88, 88, 88) 0.5pt;
+    }
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+  @include textparagragh();
+  & h4 {
+    background: rgba(191, 210, 229, 0.4);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+}
+
+
+
+
+
+.loader{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.loading-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background-color: black;
+  animation: scaleUpAndDown 1s infinite ease-in-out;
+}
+
+@keyframes scaleUpAndDown {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
