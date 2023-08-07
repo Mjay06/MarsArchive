@@ -32,9 +32,33 @@ class searchpicView {
         `;
       })
       .join("");
-    console.log("cool")
-    console.log(html)
+    console.log("cool");
+    console.log(html);
     this.parentEl.insertAdjacentHTML("afterbegin", html);
+  }
+  renderloader() {
+    this.parentEl.innerHTML = "";
+    const html = `
+    <div class="loader">
+    <section class="loading-section">
+      <div class="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+  </div>
+    `;
+    this.parentEl.insertAdjacentHTML("afterbegin", html);
+  }
+  renderfailedsearch() {
+    this.parentEl.innerHTML = "";
+    const html = `<div class="searchPic__results__default">
+                     🥲 Sorry we couldnt find the picture you searhed for!
+                 </div>`;
+    console.log(html)
+    console.log("working")
+    this.parentEl.insertAdjacentHTML("afterbegin", html)
   }
 
   handlesubmit(search) {
@@ -48,3 +72,16 @@ class searchpicView {
 }
 
 export default new searchpicView();
+
+/*  
+          <div class="loader">
+            <section class="loading-section">
+              <div class="loader">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </section>
+          </div>
+
+*/

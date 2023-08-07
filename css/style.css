@@ -26,7 +26,46 @@ body {
   margin: 0 auto;
 }
 
+.hidden {
+  display: none;
+}
+
+.navmobile {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0rem;
+  display: none;
+  flex-direction: column;
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2rem;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+.navmobile a {
+  margin: 2rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .hero {
+  position: relative;
   background: linear-gradient(0deg, rgba(93, 54, 75, 0.65) 0%, rgba(93, 54, 75, 0.65) 100%), url(/img/sunset-abandoned-mining-machinery-robot-works-generated-by-ai.jpg), lightgray 50%/cover no-repeat;
   height: 90vh;
   background-size: cover;
@@ -81,7 +120,7 @@ body {
   transform: translate(-50%, -50%);
   text-align: center;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .hero__main {
     left: 0;
     top: 50%;
@@ -100,7 +139,7 @@ body {
   width: 70.9375rem;
   margin-bottom: 4rem;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .hero__main__text {
     width: fit-content;
     font-size: 4rem;
@@ -147,12 +186,12 @@ body {
   line-height: normal;
   margin-bottom: 4rem;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .recentpic__head {
     width: fit-content;
     font-size: 3rem;
-    padding: 0;
-    margin: 0;
+    padding: 1rem 0;
+    margin: 2rem 0;
   }
 }
 .recentpic__head__paragraph {
@@ -165,10 +204,10 @@ body {
   margin-top: 2rem;
   position: relative;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .recentpic__head__paragraph {
     width: fit-content;
-    font-size: 1rem;
+    font-size: 1.6rem;
     padding: 0;
   }
 }
@@ -213,7 +252,7 @@ body {
   top: 0;
   transition: 1s all;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .recentpic__slide__container__slides {
     flex-direction: column;
   }
@@ -222,7 +261,7 @@ body {
   object-fit: contain;
   height: 100%;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .recentpic__slide__container__slides img {
     height: 80%;
   }
@@ -230,7 +269,7 @@ body {
 .recentpic__slide__container__slides__text {
   padding: 4rem;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .recentpic__slide__container__slides__text {
     padding: 1rem;
     display: flex;
@@ -252,10 +291,10 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .recentpic__slide__container__slides__text h4 {
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 }
 
@@ -265,8 +304,8 @@ body {
 }
 @media only screen and (max-width: 414px) {
   .searchPic {
-    padding: 0;
-    margin: 0;
+    padding: 1rem;
+    margin-top: 2rem;
   }
 }
 .searchPic__head {
@@ -278,6 +317,14 @@ body {
   line-height: normal;
   margin-bottom: 4rem;
 }
+@media only screen and (max-width: 700px) {
+  .searchPic__head {
+    width: fit-content;
+    font-size: 3rem;
+    padding: 1rem 0;
+    margin: 2rem 0;
+  }
+}
 .searchPic__head__paragraph {
   color: #fff;
   font-family: Urbanist;
@@ -287,6 +334,13 @@ body {
   line-height: normal;
   margin-top: 2rem;
   position: relative;
+}
+@media only screen and (max-width: 700px) {
+  .searchPic__head__paragraph {
+    width: fit-content;
+    font-size: 1.6rem;
+    padding: 0;
+  }
 }
 .searchPic__form {
   color: #fff;
@@ -298,6 +352,13 @@ body {
   margin-top: 2rem;
   position: relative;
   font-weight: 400;
+}
+@media only screen and (max-width: 700px) {
+  .searchPic__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .searchPic__form__date {
   background: rgba(37, 37, 37, 0.62);
@@ -311,6 +372,16 @@ body {
 .searchPic__form__date:focus {
   outline: none;
 }
+@media only screen and (max-width: 700px) {
+  .searchPic__form__date {
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+  }
+}
 .searchPic__form__select {
   background: rgba(37, 37, 37, 0.62);
   backdrop-filter: blur(5px);
@@ -320,10 +391,13 @@ body {
   border: none;
   margin-right: 4rem;
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 700px) {
   .searchPic__form__select {
-    padding: 0;
+    padding: 1rem 0;
     margin: 0;
+    width: fit-content;
+    font-size: 1.6rem;
+    width: 60vw;
   }
 }
 .searchPic__form__submit {
@@ -335,8 +409,45 @@ body {
   border: none;
   margin-right: 4rem;
 }
+@media only screen and (max-width: 700px) {
+  .searchPic__form__submit {
+    padding: 1rem;
+    margin: 2rem 0;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+.searchPic__results__default {
+  color: #fff;
+  font-family: Urbanist;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2rem;
+  position: relative;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 4rem;
+  background: rgba(37, 37, 37, 0.62);
+  backdrop-filter: blur(5px);
+}
+@media only screen and (max-width: 700px) {
+  .searchPic__results__default {
+    font-size: 1.6rem;
+  }
+}
 .searchPic__results__result {
   margin: 3rem 0;
+}
+@media only screen and (max-width: 700px) {
+  .searchPic__results__result {
+    font-size: 1.6rem;
+  }
 }
 .searchPic__results__description {
   color: black;
@@ -352,6 +463,13 @@ body {
   width: fit-content;
   padding: 2rem 2rem;
 }
+@media only screen and (max-width: 700px) {
+  .searchPic__results__description {
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: 0;
+  }
+}
 .searchPic__results__img {
   flex: 0 0 100%; /* Make each slide take up the full width of the wrapper */
   height: 80vh; /* Set the height of each slide to match the container */
@@ -360,6 +478,13 @@ body {
   background: rgba(191, 210, 229, 0.4);
   backdrop-filter: blur(5px);
   padding: 2rem;
+}
+@media only screen and (max-width: 700px) {
+  .searchPic__results__img {
+    font-size: 1.2rem;
+    border-radius: 0;
+    height: 50vh;
+  }
 }
 .searchPic__results img {
   width: 100%; /* Ensure the image takes up the whole slide */
@@ -383,6 +508,14 @@ body {
   margin-top: -4rem;
   border: solid rgb(88, 88, 88) 0.5pt;
 }
+@media only screen and (max-width: 700px) {
+  .searchPic__results__info {
+    font-size: 1.2rem;
+    padding: 1rem;
+    border-radius: 0;
+    flex-direction: column;
+  }
+}
 
 .pagination {
   display: flex;
@@ -402,6 +535,13 @@ body {
   backdrop-filter: blur(5px);
   padding: 2rem;
   border-radius: 1rem;
+}
+
+.footer {
+  background: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem;
 }
 
 .loader {

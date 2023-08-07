@@ -1,7 +1,30 @@
 import { model, fetchdata, fetchsearch } from "./model.js";
 import view from "./view.js";
-import searchview from "./searchview.js"
+import searchview from "./searchview.js";
 console.log(view);
+
+const elementToScrollFrom = document.querySelector('.hero__main__btn')
+const elementToScrollTo = document.querySelector('.recentpic')
+const navbar = document.querySelector('.hero__head__navres')
+const navtoggle = document.querySelector('.navmobile')
+const navtext = document.querySelectorAll('.navmobile__text')
+Array.from(navtext).forEach(nav =>{
+  nav.addEventListener('click', function(){
+    navtoggle.style.display = 'none'
+  })
+})
+navbar.addEventListener('click', function(){
+  if (navtoggle.style.display === 'flex'){
+    navtoggle.style.display = 'none'
+  }
+  else{
+    navtoggle.style.display = 'flex'
+  }
+})
+
+elementToScrollFrom.addEventListener('click', function(){
+  elementToScrollTo.scrollIntoView({behavior: 'smooth'})
+})
 
 let slides = document.querySelectorAll(".recentpic__slide__container__slides");
 console.log(slides);
@@ -19,7 +42,6 @@ function gotoslide(count) {
   });
   console.log("worked");
 }
-
 
 function controlSlider() {
   function nextslide() {
@@ -46,17 +68,23 @@ function controlSlider() {
   view.addSwitchHandler(prevslide, nextslide);
 }
 
-
-async function search(date, cameraType){
-  await fetchsearch(date, cameraType)
-  console.log(model.searchdata)
-  searchview.renderSearch(model.searchdata.photos)
+async function search(date, cameraType) {
+  searchview.renderloader()
+  await fetchsearch(date, cameraType);
+  console.log(model.searchdata);
+  if (model.searchdata.photos.length === 0){
+    searchview.renderfailedsearch() 
+    return 
+  }
+  searchview.renderSearch(model.searchdata.photos);
 }
-searchview.handlesubmit(search)
+
+searchview.handlesubmit(search);
+
 
 function init() {
   controltodaydata();
-  controlSlider()
+  controlSlider();
 }
 
 init();

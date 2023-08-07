@@ -26,19 +26,25 @@
   </head>
   <body>
     <main>
+     
+
       <div class="hero">
         <header class="hero__head">
           <div class="hero__head__logo">
             <img src="./img/logo.png" alt="" />
           </div>
           <nav class="hero__head__nav">
-            <h4 class="hero__head__nav__text">Explore mars</h4>
-            <h4 class="hero__head__nav__text">Yesterday's View</h4>
-            <h4 class="hero__head__nav__text">About</h4>
+            <a href="#section--1" class="hero__head__nav__text">Recent Pictures Of Mars</a>
+            <a href="#section--2" class="hero__head__nav__text">Explore Mars</a>
+            <a href="#section--3" class="hero__head__nav__text">About</a>
           </nav>
+
+
           <nav class="hero__head__navres">
             <img src="./img/hambuger.png" alt="" />
           </nav>
+
+
         </header>
         <div class="hero__main">
           <h1 class="hero__main__text">
@@ -46,16 +52,22 @@
           </h1>
           <button class="hero__main__btn">Get Started</button>
         </div>
+        <nav class="navmobile hidden">
+          <a href="#section--1" class="navmobile__text">Recent Pictures Of Mars</a>
+          <a href="#section--2" class="navmobile__text">Explore Mars</a>
+          <a href="#section--3" class="navmobile__text">About</a>
+        </nav>
       </div>
-      <section class="recentpic">
+      <section id="section--1" class="recentpic">
         <header class="recentpic__head">
-          Yesterday's View
+          Recent Pictures Of Mars
           <p class="recentpic__head__paragraph">
             Yesterday's Marvels: Relive Mars' Beauty. Explore a selection of
             awe-inspiring images captured by Mars rovers on the previous day.
             Step back in time and witness the Red Planet's captivating
             landscapes firsthand.
           </p>
+
         </header>
         <div class="recentpic__slide">
           <div class="recentpic__slide__container">
@@ -76,7 +88,7 @@
           <img class="btnleft" src="./img/previous.png" alt="" />
         </div>
       </section>
-      <section class="searchPic">
+      <section id="section--2" class="searchPic">
         <header class="searchPic__head">
           Explore Mars
           <p class="searchPic__head__paragraph">
@@ -96,26 +108,16 @@
                 id="camera-type"
                 id=""
               >
-                <option value="fhaz">
-                  FHAZ Front Hazard Avoidance Camera
-                </option>
-                <option value="rhac">
-                  RHAZ Rear Hazard Avoidance Camera
-                </option>
+                <option value="fhaz">FHAZ Front Hazard Avoidance Camera</option>
+                <option value="rhac">RHAZ Rear Hazard Avoidance Camera</option>
                 <option value="mast">MAST Mast Camera</option>
                 <option value="chemcam">
                   CHEMCAM Chemistry and Camera Complex
                 </option>
-                <option value="mahli">
-                  MAHLI Mars Hand Lens Imager
-                </option>
-                <option value="mardi">
-                  MARDI Mars Descent Imager
-                </option>
+                <option value="mahli">MAHLI Mars Hand Lens Imager</option>
+                <option value="mardi">MARDI Mars Descent Imager</option>
                 <option value="nc">Navigation Camera</option>
-                <option value="Pancam">
-                  PANCAM Panoramic Camera
-                </option>
+                <option value="Pancam">PANCAM Panoramic Camera</option>
                 <option
                   value="MINITES	Miniature Thermal Emission Spectrometer (Mini-TES)"
                 >
@@ -133,22 +135,24 @@
           </form>
         </header>
         <div class="searchPic__results">
-          <div class="loader">
-            <section class="loading-section">
-              <div class="loader">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-              </div>
-            </section>
+          <div class="searchPic__results__default">
+            😉 Search for your cool mars picture
           </div>
         </div>
       </section>
-      <div class="pagination">
-        <h4 class="pagination__prev">previous page</h4>
-        <h4 class="pagination__prev">next page</h4>
-      </div>
     </main>
+    <section id="section--3" class="searchPic">
+      <header class="searchPic__head">
+        ABOUT
+        <p class="searchPic__head__paragraph">
+          Meet Oluwasemiloore Ogunyemi, the creator of Mars Archive! A space enthusiast
+          with a passion for Mars exploration.
+        </p>
+      </header>
+    </section>
+    <div id="section--4" class="footer">
+      <img src="./img/Group 6.png" alt="">
+    </div>
   </body>
- <script src="controller.js" type="module"></script>
+  <script src="controller.js" type="module"></script>
 </html>
