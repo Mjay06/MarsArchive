@@ -4,7 +4,7 @@ class showtodayspic {
   data;
   rendersliderimg(data) {
     this.data = data;
-    console.log(data);
+
     this.parentEL.innerHTML = "";
     const html = data
       .map((datum) => {

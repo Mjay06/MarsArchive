@@ -32,8 +32,6 @@ class searchpicView {
         `;
       })
       .join("");
-    console.log("cool");
-    console.log(html);
     this.parentEl.insertAdjacentHTML("afterbegin", html);
   }
   renderloader() {
@@ -56,9 +54,8 @@ class searchpicView {
     const html = `<div class="searchPic__results__default">
                      🥲 Sorry we couldnt find the picture you searhed for!
                  </div>`;
-    console.log(html)
-    console.log("working")
-    this.parentEl.insertAdjacentHTML("afterbegin", html)
+
+    this.parentEl.insertAdjacentHTML("afterbegin", html);
   }
 
   handlesubmit(search) {
